@@ -45,7 +45,9 @@ public class Facial_Recognition {
             con = (Connection) DriverManager.getConnection(url, user, password);
             System.out.println("Connection Successful!");
             
+            // ##### ADD YOUR QUERY #####
             String myQuery = "SELECT address FROM contact";
+            
             System.out.println("Running query: " + myQuery);
             st = con.createStatement();
             rs = st.executeQuery(myQuery);
