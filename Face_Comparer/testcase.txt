@@ -1,0 +1,5 @@
+1 personA Cambridge_FaceDB/s1/9.pgm
+6 personF Cambridge_FaceDB/s6/7.pgm
+11 Priya Cambridge_FaceDB/s32/8.pgm
+11 Priya Cambridge_FaceDB/s32/9.pgm
+16 Unknown Cambridge_FaceDB/s28/1.pgm
