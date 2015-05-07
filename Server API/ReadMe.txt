@@ -1,5 +1,6 @@
 ########## CHANGELOG ##########
 Version 1.0 - Vanilla API (SELECT, CREATE, UPDATE, DELETE)
+Version 1.1 - added UPLOAD IMAGE, GET IMAGE, and internal function createUniqueId
 
 
 
