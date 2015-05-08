@@ -1,8 +1,25 @@
-{ "id" : 1,
-    "user_id" : "2434r758-3D29453B453159FB9CE6FB204CFB1D46",
-    "contact_id": 3,
-    "name": "Kevin Soncuya",
-    "phone": 4158675309,
-    "address": "1600 Holloway Avenue, San Francisco CA 94132", 
-    "match_found": 1 
-}
+{
+  "contactID": " mshah",
+  "confidenceLevel": 0.656465,
+  "isMatched": true
+},
+{
+  "contactID": " ksoncuya  ",
+  "confidenceLevel": 0.463332,
+  "isMatched": false
+},
+{
+  "contactID": " akibis  ",
+  "confidenceLevel": 0.6837263,
+  "isMatched": true
+},
+{
+  "contactID": " atao  ",
+  "confidenceLevel": 0.7243498,
+  "isMatched": true
+},
+{
+  "contactID": " pkaram  ",
+  "confidenceLevel": 0.523844,
+  "isMatched": true
+},
