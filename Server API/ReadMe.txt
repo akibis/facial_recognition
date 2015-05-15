@@ -1,7 +1,7 @@
 ########## CHANGELOG ##########
 Version 1.0 - Vanilla API (SELECT, CREATE, UPDATE, DELETE)
 Version 1.1 - added UPLOAD IMAGE, GET IMAGE, and internal function createUniqueId
-
+Version 1.2 - added FIND-FACE and PARSE-OUTPUT functions
 
 
 ############ USAGE ############
@@ -64,3 +64,19 @@ Retrieves an image from the 'face' table by unique id. This is only a test funct
 
 Parameters:
 id
+
+
+FIND-FACE(find-face.php)
+Uses POST request. Takes in a base64 encoded BMP, PNM, or PGM image of size 92x112. Creates 'image' file in API directory and writes decoded image data to it. Creates 'testcase' file that OpenCV uses to read image data from. Calls OpenCV as a shell command, returns results in JSON format.
+
+  On Success: "Nearest: <persons name>, Confidence: <value between 0 and 1>, Result: FOUND or NOT FOUND
+
+  On Failure: "Result: 0, Error Message"
+
+  Parameters: 'image', 'raw base64 data only [bmp, pgm, pnm]'
+
+
+
+
+
+

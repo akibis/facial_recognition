@@ -1,19 +1,9 @@
-RewriteEngine On
- 
-RewriteBase /
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^(.*)$ index.php [QSA,L]
+<?php
+$db_host = 'localhost'; //hostname
+$db_user = 'fr_api'; // username
+$db_password = 'test20151!'; // password
+$db_name = 'facial_recognition'; //database name
+$conn = mysql_connect($db_host, $db_user, $db_password );
+mysql_select_db($db_name, $conn);
 
-
-function getConnection() {
-    try {
-        $db_username = "fr_api";
-        $db_password = "test20151!";
-        $conn = new PDO('mysql:host=localhost;dbname=facial_recognition', $db_username, $db_password);
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
- 
-    } catch(PDOException $e) {
-        echo 'ERROR: ' . $e->getMessage();
-    }
-    return $conn;
-}
+?>

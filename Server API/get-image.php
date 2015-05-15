@@ -16,12 +16,12 @@ $sql = mysql_query($query);
 if ($sql) {
 $images = array();
 while ($row = mysql_fetch_assoc($sql)) {
-        $images[] = $row['face'];
+	$images[] = $row['face'];
 }
 
 foreach ($images as $image) {
-        echo '<img src="data:image/x-ms-bmp;base64,'.$image.'" />';
-        $imageEncoded = '<img src="data:image/x-ms-bmp;base64,'.$image.'" />';
+	echo '<img src="data:image/x-ms-bmp;base64,'.$image.'" />';
+	$imageEncoded = '<img src="data:image/x-ms-bmp;base64,'.$image.'" />';
 }
 $data = array("result" => 1, "message" => "BLOB retrieved successfully!");
 } else {
@@ -38,4 +38,3 @@ echo json_encode($data);
 
 
 ?>
-

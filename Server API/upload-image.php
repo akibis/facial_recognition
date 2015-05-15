@@ -1,10 +1,11 @@
 <?php
 /* include db.config.php */
 include_once('db_config.php');
+include_once('create_id.php');
 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
 // Get image data
-$id = isset($_POST['id']) ? mysql_real_escape_string($_POST['id']) : "";
+$id = createUniqueId("face");
 $userId = isset($_POST['user_id']) ? mysql_real_escape_string($_POST['user_id']) : "";
 $contactId = isset($_POST['contact_id']) ? mysql_real_escape_string($_POST['contact_id']) : "";
 $face = isset($_POST['face']) ? mysql_real_escape_string($_POST['face']) : "";
@@ -26,5 +27,10 @@ mysql_close($conn);
 /* JSON Response */
 header('Content-type: application/json');
 echo json_encode($data);
+
+// TEST QUERY
+//$img = mysql_query("SELECT face FROM face WHERE id = '1'");
+
+//echo '<img src="data:image/x-ms-bmp;base64,' . $img . '" />';
 
 ?>
